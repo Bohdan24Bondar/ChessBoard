@@ -47,12 +47,12 @@
     <Compile Include="Interfaces\ICell.cs" />
     <Compile Include="Enums\CellColor.cs" />
     <Compile Include="Classes\ChessBoard.cs" />
-    <Compile Include="Classes\ChessBoardController.cs" />
+    <Compile Include="Classes\ConsoleController.cs" />
     <Compile Include="Classes\EmptyCell.cs" />
-    <Compile Include="Classes\Position.cs" />
+    <Compile Include="Classes\Coordinate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Classes\UserInterface.cs" />
+    <Compile Include="Classes\Viewer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -11,7 +11,7 @@ namespace ChessBoardTask
         static void Main(string[] args)
         {
             
-            ChessBoardController boardController = new ChessBoardController(true);
+            ConsoleController boardController = new ConsoleController(true);
             boardController.Run();
 
             Console.ReadKey();

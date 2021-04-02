@@ -8,7 +8,7 @@ namespace ChessBoardTask
 {
     public interface ICell
     {
-        Position PositionOnBoard { get; }
+        Coordinate Position { get; }
 
         CellColor Color { get; }
     }

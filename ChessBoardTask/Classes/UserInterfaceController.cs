@@ -17,7 +17,7 @@ namespace ChessBoardTask
 
         #region Private
 
-        private UserInterface _viewer;
+        private Viewer _viewer;
 
         #endregion
 
@@ -27,7 +27,7 @@ namespace ChessBoardTask
 
         public UserInterfaceController()
         {
-            _viewer = new UserInterface();
+            _viewer = new Viewer();
         }
 
         public void Run()

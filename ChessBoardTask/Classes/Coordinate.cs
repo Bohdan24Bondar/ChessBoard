@@ -6,21 +6,15 @@ using System.Threading.Tasks;
 
 namespace ChessBoardTask
 {
-    public class Position
+    public struct Coordinate
     {
         private int _height;
         private int _width;
 
-        public Position(int height, int width)
+        public Coordinate(int height, int width)
         {
-            Height = height;
-            Width = width;
-        }
-
-        public Position(Position currentPosition)
-        {
-            Height = currentPosition.Height;
-            Width = currentPosition.Width;
+            _height = height;
+            _width = width;
         }
 
         public int Height 
@@ -55,14 +49,6 @@ namespace ChessBoardTask
 
                 _width = value;
             } 
-        }
-
-        public Position CurrentPosition 
-        {
-            get
-            {
-                return new Position(this);
-            }
         }
     }
 }

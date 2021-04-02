@@ -92,7 +92,7 @@ namespace ChessBoardTask
                         currentColor = CellColor.Black;
                     }
 
-                    _plentyCells.Add(new EmptyCell(new Position(row, column), currentColor));
+                    _plentyCells.Add(new EmptyCell(new Coordinate(row, column), currentColor));
                     isWhiteColor = !isWhiteColor;
                 }
 

@@ -10,37 +10,31 @@ namespace ChessBoardTask
     {
         #region Private
 
-        private Position _positionOnBoard;
+        private Coordinate _positionOnBoard;
         private CellColor _currentColor;
 
         #endregion
 
-        public EmptyCell(Position boardPosition, CellColor color)
+        public EmptyCell(Coordinate boardPosition, CellColor color)
         {
-            PositionOnBoard = new Position(boardPosition);
+            Position = boardPosition;
             Color = color;
         }
 
         public EmptyCell(ICell currentCell)
         {
-            PositionOnBoard = new Position(currentCell.PositionOnBoard);
+            Position = currentCell.Position;
             Color = currentCell.Color;
         }
 
-        public Position PositionOnBoard 
+        public Coordinate Position 
         {
             get
             {
-                return new Position(_positionOnBoard);
+                return _positionOnBoard;
             } 
             private set
             {
-                if (value == null)
-                {
-                    throw new ArgumentNullException("Empty reference for " +
-                        "<PositionOnBoard>");
-                }
-
                 _positionOnBoard = value;
             }
         }

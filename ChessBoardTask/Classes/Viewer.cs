@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChessBoardTask
 {
-    class UserInterface
+    class Viewer
     {
         #region Consts
 
@@ -51,7 +51,7 @@ namespace ChessBoardTask
 
             foreach (var cell in boardCells)
             {
-                Console.SetCursorPosition(cell.PositionOnBoard.Width, cell.PositionOnBoard.Height);
+                Console.SetCursorPosition(cell.Position.Width, cell.Position.Height);
 
                 if (cell.Color == CellColor.White)
                 {
