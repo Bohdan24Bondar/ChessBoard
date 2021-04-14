@@ -44,11 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\UserInterfaceController.cs" />
+    <Compile Include="FigureImage.cs" />
     <Compile Include="Interfaces\ICell.cs" />
     <Compile Include="Enums\CellColor.cs" />
     <Compile Include="Classes\ChessBoard.cs" />
     <Compile Include="Classes\ConsoleController.cs" />
-    <Compile Include="Classes\EmptyCell.cs" />
+    <Compile Include="Classes\Cell.cs" />
     <Compile Include="Structs\Coordinate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -56,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

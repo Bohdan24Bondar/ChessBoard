@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ChessBoardTask.ConsoleController" Collapsed="true">
+    <Position X="3.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAACI=</HashCode>
+      <FileName>Classes\ConsoleController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessBoardTask.Viewer" Collapsed="true">
+    <Position X="1.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAEAgAAIAAAAAAAAAAAAAAAIAAAAAAAAAAAAEBAA=</HashCode>
+      <FileName>Classes\Viewer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessBoardTask.ChessBoard" Collapsed="true">
+    <Position X="3.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABACAAAAAAAAAAEBAABQAAAAAgEAAAAAAAAA=</HashCode>
+      <FileName>Classes\ChessBoard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessBoardTask.Cell" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAgAACAAAAAAAAAAAEAAAAAgAAAAAA=</HashCode>
+      <FileName>Classes\Cell.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="ChessBoardTask.ICell" Collapsed="true">
+    <Position X="1.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Interfaces\ICell.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

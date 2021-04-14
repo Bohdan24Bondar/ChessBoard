@@ -19,7 +19,7 @@ namespace ChessBoardTask
 
         private int _height;
         private int _width;
-        private List<ICell> _plentyCells;
+        private Queue<ICell> _plentyCells;
 
         #endregion
 
@@ -27,7 +27,7 @@ namespace ChessBoardTask
         {
             Height = height;
             Width = width;
-            _plentyCells = null;
+            _plentyCells = new Queue<ICell>(_height * _width);
         }
 
         public int Height
@@ -36,7 +36,7 @@ namespace ChessBoardTask
             {
                 return _height;
             }
-            set
+            private set
             {
                 if (value < 0)
                 {
@@ -58,7 +58,7 @@ namespace ChessBoardTask
             {
                 return _width;
             }
-            set
+            private set
             {
                 if (value < 0)
                 {
@@ -76,7 +76,6 @@ namespace ChessBoardTask
 
         public void FillBoard(bool isWhiteColor)
         {
-            _plentyCells = new List<ICell>(_height * _width);
             CellColor currentColor;
 
             for (int row = 0; row < _height; row++)
@@ -92,7 +91,8 @@ namespace ChessBoardTask
                         currentColor = CellColor.Black;
                     }
 
-                    _plentyCells.Add(new EmptyCell(new Coordinate(row, column), currentColor));
+                    _plentyCells.Enqueue(new Cell(new Coordinate(row, column), 
+                            currentColor, FigureImage.None));
                     isWhiteColor = !isWhiteColor;
                 }
 
@@ -100,13 +100,13 @@ namespace ChessBoardTask
             }
         }
 
-        public void GetBoardCells(out ICollection<ICell> boardCells)
+        public void GetBoardCells(out Queue<ICell> boardCells)
         {
-            boardCells = new List<ICell>(_height * _width);
+            boardCells = new Queue<ICell>(_height * _width);
 
             foreach (var cell in _plentyCells)
             {
-                boardCells.Add(new EmptyCell(cell));
+                boardCells.Enqueue(new Cell(cell));
             }
         }
     }

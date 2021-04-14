@@ -6,22 +6,25 @@ using System.Threading.Tasks;
 
 namespace ChessBoardTask
 {
-    class EmptyCell : ICell
+    class Cell : ICell
     {
         #region Private
 
         private Coordinate _positionOnBoard;
         private CellColor _currentColor;
+        private FigureImage _picture;
 
         #endregion
 
-        public EmptyCell(Coordinate boardPosition, CellColor color)
+        public Cell(Coordinate boardPosition, CellColor color, FigureImage picture)
         {
-            Position = boardPosition;
-            Color = color;
+            _positionOnBoard = boardPosition;
+            _currentColor = color;
+            _picture = picture;
+            
         }
 
-        public EmptyCell(ICell currentCell)
+        public Cell(ICell currentCell)
         {
             Position = currentCell.Position;
             Color = currentCell.Color;
@@ -49,11 +52,29 @@ namespace ChessBoardTask
             {
                 if ((value < CellColor.None) || (value > CellColor.Black))
                 {
-                    throw new ArgumentException("Wrong value for <Color>");
+                    throw new FormatException("Wrong value for <Color>");
                 }
 
                 _currentColor = value;
             } 
         }
+
+        public FigureImage Picture
+        {
+            get
+            {
+                return _picture;
+            }
+            private set
+            {
+                if (value < FigureImage.None)
+                {
+                    throw new FormatException("Wrong value for <Color>");
+                }
+
+                _picture = value;
+            }
+        }
+
     }
 }

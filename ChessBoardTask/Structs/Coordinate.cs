@@ -23,7 +23,7 @@ namespace ChessBoardTask
             {
                 return _height;
             }
-            set
+            private set
             {
                 if (value < 0)
                 {
@@ -40,7 +40,7 @@ namespace ChessBoardTask
             {
                 return _width;
             }
-            set
+            private set
             {
                 if (value < 0)
                 {

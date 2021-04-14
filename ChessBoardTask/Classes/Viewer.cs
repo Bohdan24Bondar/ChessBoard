@@ -45,7 +45,7 @@ namespace ChessBoardTask
             return isHeight & isWidth;
         }
 
-        public void PrintBoard(ICollection<ICell> boardCells)
+        public void PrintBoard(Queue<ICell> boardCells)
         {
             Console.Clear();
 

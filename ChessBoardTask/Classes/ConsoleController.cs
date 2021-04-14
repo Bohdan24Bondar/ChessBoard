@@ -8,9 +8,15 @@ namespace ChessBoardTask
 {
     class ConsoleController
     {
-        public const string message = "Please enter even number for <Width> " +
-            "than <,> and <Height>\nAfter these actions push <Enter>";
-        
+
+        #region Consts
+
+        public const string message = "Please enter even number for <Height> " +
+            "than <,> and <Width>\nAfter these actions push <Enter>";
+
+
+        #endregion
+
         #region Private
 
         private ChessBoard _currentBoard;
@@ -34,7 +40,7 @@ namespace ChessBoardTask
             _currentUI.GetNumbers(message, out height, out width);
             _currentBoard = new ChessBoard(height, width);
             _currentBoard.FillBoard(_isWhiteFirst);
-            ICollection<ICell> boardCells;
+            Queue<ICell> boardCells;
             _currentBoard.GetBoardCells(out boardCells);
             _currentUI.PrintBoard(boardCells);
         }

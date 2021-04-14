@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace ChessBoardTask
 {
-    public interface ICell
+    public enum FigureImage
     {
-        Coordinate Position { get; }
-
-        CellColor Color { get; }
-
-        FigureImage Picture { get; }
+        None = 0
     }
 }
